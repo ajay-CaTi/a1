@@ -1,4 +1,8 @@
 h1 {
-  color: brown;
-  background-color: blue;
+  color: rgb(241, 75, 75);
+  background-color: rgb(135, 135, 248);
+}
+h2 {
+  color: rgb(153, 35, 35);
+  background-color: rgb(209, 209, 245);
 }
