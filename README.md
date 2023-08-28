@@ -179,4 +179,12 @@ at div
 
 # This code is not raedy to push in production Why Because it is not optimise, minified, not bundled, compressed, optimise images
 
-#
+# NPM( PACKAGE MANAGER ) not Node Package Manager
+
+# npm is the world's largest Software Registry. The registry contains over 800,000 code packages. Open-source developers use npm to share software.
+
+# Packages == Dependencies
+
+# ~ Tilde install major version automatically
+
+# ^ Caret de install minor version automatically

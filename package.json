@@ -1,0 +1,21 @@
+{
+  "name": "a1",
+  "version": "1.0.0",
+  "description": "important stuff of building app from scratch",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajay-CaTi/a1.git"
+  },
+  "author": "me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajay-CaTi/a1/issues"
+  },
+  "homepage": "https://github.com/ajay-CaTi/a1#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}
