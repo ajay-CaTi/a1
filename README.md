@@ -209,4 +209,73 @@ Because it will Re-generate with help of package.json
 
 # WHat ever regenerate do not put it on server/git
 
-#
+# npx parcel index.html
+
+paccel create a server and our app is available on this server
+
+# execute parcel package and give path to main file
+
+# nOt good practice to put cdn links in our app in production mode
+
+Because it make another request to that link to import react and react dom in our app & Today is React 18.2.0 tommmorrow is some another version Headache to updated CDN. So it will be easy to instal it rather than put CDN links
+
+# Parcel
+
+- Dev Buid
+- Local Server
+- HMR(Hot Module Replacement) Automatically refresh by Read and keep track of file
+- File Watching Algo:- written in C++
+- Parcel is caching things & provide faster builds
+- Iamge Optimization
+- Minification
+- Bundeling
+- Compress (Remove all white space)
+- React is fast because of the above thing provide by Parcel
+- Consistent Hashing
+- Code SPlitting
+- Differencial Bundeling (for app is run over different browsers)
+- Diagonstic
+- Error Handling
+- Tree Shaking ALogo- remove unuse of code
+- DIfferent dev and prod bundles
+
+# Why JSX build
+
+- make it syntactically easier
+- Combination of hTML Like + logic in one file
+- Developer Life easy
+
+# Jsx gives to transpiler Babel it converted to React.craeteElement into JS Object
+
+# What is the difference between element and component?
+
+a component refers to a small part of a larger entity
+Elements are light, stateless and hence it is faster
+
+# Component Cmposition
+
+One component use in another
+
+# Fubnction component?
+
+It is just a JS function which will return some jsx
+
+# Cross side scripting?
+
+# JSX takes injection attack
+
+Some of the limitations of arrow functions are as follows:
+
+- Arrow functions are anonymous and can be harder to debug. However, we can assign them to a variable for more clarity.
+- Arrow functions cannot be used as constructors.
+- Arrow functions do not have new.target keyword.
+- Arrow functions don't have their own bindings to this or super. Also, they should not be used as methods.
+- We usually cannot use an arrow function as a method.
+- Arrow functions cannot be used as a generator function.
+- The call, apply and bind methods cannot be used with arrow functions.
+
+Some of the benefits of using arrow functions in JavaScript are as follows:
+
+- Arrow functions have shorter syntax than regular - function expressions.
+- Arrow functions have implicit return statements.
+- Arrow functions increase readability.
