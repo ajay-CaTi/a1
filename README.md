@@ -176,3 +176,7 @@ at div
 # First it load React in our code THen loads ReactDOM in our code THen loads Add.js file code THen root.render it inside root div
 
 # React just give some HE:PER METHODS to build faster APPLICATIONS
+
+# This code is not raedy to push in production Why Because it is not optimise, minified, not bundled, compressed, optimise images
+
+#

@@ -13,7 +13,8 @@ const parent = React.createElement("div", { className: "parent" }, [
 
 console.log(parent);
 
-// Core of react is above
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(parent);
+
+// This code is not raedy to push in production Why Because it is not optimise, minified, not bundled, compressed, optimise images
