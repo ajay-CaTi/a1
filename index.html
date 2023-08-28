@@ -16,11 +16,13 @@
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
     ></script>
     <script>
-      const root = document.getElementById("root");
-      const heading = document.createElement("h1");
-      heading.innerText = "I am heading";
-      heading.classList.add("heading");
-      root.append(heading);
+      const heading = React.createElement(
+        "h1",
+        { className: "heading" },
+        "i am heading"
+      );
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(heading);
     </script>
   </body>
 </html>

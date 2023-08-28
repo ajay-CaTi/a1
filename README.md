@@ -122,3 +122,25 @@ git branch -d BRANCH NAME ( TO DELETE BRANCH )
 git push --set-upstream origin mohna
 
 git pull origin main( USE TO FETCH AND DOWNLOAD CONTENT FROM A REMOTE REPO AND IMMEDIATE UPDATE THE LOCAL REPO TO MATCH THAT CONTENT )
+
+const heading = React.createElement(
+"h1",
+{ className: "heading" },
+"i am heading"
+);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(heading);
+
+React.createElement(
+"ELEMENT ex:- h1, div",
+{OBJECT like:- className, id },
+"CHILDREN or nested, child elements"
+);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+# craeting an element is core thng of react
+
+# creating root and rendering EVERYthing inside it , it is a job of reactDOM
+
+#
