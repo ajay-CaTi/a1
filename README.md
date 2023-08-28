@@ -142,6 +142,8 @@ React.createElement(
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+# Array List Of Object, of children to make parallel child elements
+
 # root.render(JOB IS TAKE THE OBJECT CREATE THE ELEMENT H1 TAG AND PUT IT INSIDE ROOT ELEMENT)
 
 # createElement= CREATE REACT ELEMENT LAST OF DAY IT IS OBJECT
@@ -154,4 +156,23 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 # Dom menupulation is most costly operation and react do this efficiently thats why it is so populat ans it is also used in an existing project or a very specific part of website ex:- header, or a single page
 
-#
+# Warning:
+
+Each child in a list should have a unique "key" prop.
+
+Check the top-level render call using <div>. See https://reactjs.org/link/warning-keys for more information.
+at div
+
+# in console key is define in react element to distinguish each element in a n array for their update delete added so rerendering the whole component is reduced
+
+# Core of react is above
+
+# JSX is javascript xml it is a syntax to make code more easy dubugging, easy read, developer friendly syntax
+
+# REact code is after the cdn link Before it throws error
+
+# Content already in root div will be replace by what it is it in render
+
+# First it load React in our code THen loads ReactDOM in our code THen loads Add.js file code THen root.render it inside root div
+
+# React just give some HE:PER METHODS to build faster APPLICATIONS

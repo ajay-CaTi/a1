@@ -10,5 +10,10 @@ const parent = React.createElement("div", { className: "parent" }, [
     React.createElement("h2", { className: "heading2" }, "Heading2")
   ),
 ]);
+
+console.log(parent);
+
+// Core of react is above
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(parent);
