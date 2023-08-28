@@ -128,19 +128,30 @@ const heading = React.createElement(
 { className: "heading" },
 "i am heading"
 );
+
+CONSOLE.LOG(heading) // Print OBJECT
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(heading);
 
 React.createElement(
 "ELEMENT ex:- h1, div",
-{OBJECT like:- className, id },
+{OBJECT, attributes like:- className, id },
 "CHILDREN or nested, child elements"
 );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+# root.render(JOB IS TAKE THE OBJECT CREATE THE ELEMENT H1 TAG AND PUT IT INSIDE ROOT ELEMENT)
+
+# createElement= CREATE REACT ELEMENT LAST OF DAY IT IS OBJECT
+
 # craeting an element is core thng of react
 
 # creating root and rendering EVERYthing inside it , it is a job of reactDOM
+
+# type="module"?
+
+# Dom menupulation is most costly operation and react do this efficiently thats why it is so populat ans it is also used in an existing project or a very specific part of website ex:- header, or a single page
 
 #
