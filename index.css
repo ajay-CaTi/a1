@@ -1,8 +1,68 @@
-h1 {
-  color: rgb(241, 75, 75);
-  background-color: rgb(135, 135, 248);
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
-h2 {
-  color: rgb(153, 35, 35);
-  background-color: rgb(209, 209, 245);
+
+.body {
+  margin: 10px;
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: aqua;
+  align-items: center;
+  margin: 0px 15px;
+  border-radius: 10px;
+}
+
+.logo_container > img {
+  width: 100px;
+}
+
+.nav_items > ul {
+  display: flex;
+}
+
+.nav_items > ul > li {
+  text-decoration: none;
+  list-style-type: none;
+  margin: 5px 10px;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+.res_card {
+  width: 200px;
+  min-height: 240px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.search_container {
+  margin-bottom: 10px;
+}
+
+.res_container {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.res_card {
+  margin: 10px;
+}
+
+.res_card > img {
+  display: flex;
+  margin: auto;
+  width: 150px;
+}
+
+.res_card:hover {
+  background-color: rgb(231, 227, 227);
 }

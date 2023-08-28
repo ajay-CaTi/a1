@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
-const jsxHeading = "Hi Bro";
+import Header from "../components/Header";
+import Body from "../components/Body";
 
 const App = () => {
   return (
     <div>
-      <h1>App is here {jsxHeading}</h1>
+      <Header />
+      <Body />
     </div>
   );
 };
