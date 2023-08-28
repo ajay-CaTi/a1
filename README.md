@@ -188,3 +188,25 @@ at div
 # ~ Tilde install major version automatically
 
 # ^ Caret de install minor version automatically
+
+# packahe-lock.json :--> Keeps track of exact verion of packages
+
+# "integrity":"## HASH ##" :--> "Working on my local and not working on production" so it keeps hash to keep track what version is in development will be same as in production
+
+# packahe.json :--> Keeps track of approx verion of packages
+
+# nde_modules :--> Database of packages, packages are stored here, their data.
+
+# what is Transitive Dependencies?
+
+Apackage have its own dependencies and that dependencies have therir own dependencies known as Transitive Dependencies
+
+# Should i put node_modules file on git NO
+
+Because it will Re-generate with help of package.json
+
+# Should i put package.json, package-lock.json file on git yes Because it will kepp track of our dependencies
+
+# WHat ever regenerate do not put it on server/git
+
+#
