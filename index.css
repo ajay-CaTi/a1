@@ -35,9 +35,10 @@
 }
 
 .res_card {
+  margin: 10px;
   width: 200px;
   min-height: 240px;
-  padding: 10px;
+  padding: 5px;
   border: 2px solid black;
   border-radius: 10px;
 }
@@ -53,16 +54,38 @@
   justify-content: space-evenly;
 }
 
-.res_card {
-  margin: 10px;
-}
-
 .res_card > img {
   display: flex;
+  border-radius: 10px;
   margin: auto;
-  width: 150px;
+  width: 180px;
+  height: 140px;
 }
 
 .res_card:hover {
   background-color: rgb(231, 227, 227);
+}
+
+.shimmer_container {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.shimmer_card {
+  margin: 10px;
+  width: 200px;
+  min-height: 300px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.shimmer_card:hover {
+  background-color: rgb(231, 227, 227);
+}
+
+.btnWidth > button {
+  width: 50px;
 }

@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
 import { FOOD_API } from "./utils/constants";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
   const [listOfResturants, setListOfResturants] = useState([]);
+  const [filterResturant, setFilterResturant] = useState([]);
+  const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
     fetchData();
@@ -14,10 +17,11 @@ const Body = () => {
     const json = await data.json();
 
     const resData =
-      json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants;
+      json?.data?.cards[2].card?.card?.gridElements?.infoWithStyle?.restaurants;
 
     console.log(resData);
     setListOfResturants(resData);
+    setFilterResturant(resData);
   };
 
   const filterTopRes = () => {
@@ -27,15 +31,36 @@ const Body = () => {
     console.log(list);
     setListOfResturants(list);
   };
+
+  if (listOfResturants.length == 0) {
+    return <Shimmer />;
+  }
   return (
     <div className="body">
       <div className="search_container">
-        <input type="text" className="search_input" />
-        <button>Search</button>
+        <input
+          value={searchText}
+          onChange={(e) => {
+            setSearchText(e.target.value);
+          }}
+          type="text"
+          className="search_input"
+        />
+        <button
+          onClick={() => {
+            console.log(searchText);
+            const filterResturant = listOfResturants.filter((res) =>
+              res.info.name.toLowerCase().includes(searchText)
+            );
+            setFilterResturant(filterResturant);
+          }}
+        >
+          Search
+        </button>
         <button onClick={filterTopRes}>Top rated Restaurants</button>
       </div>
       <div className="res_container">
-        {listOfResturants.map((val) => {
+        {filterResturant.map((val) => {
           return (
             <RestaurantCard
               key={val.info.id}

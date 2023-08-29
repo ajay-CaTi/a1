@@ -307,3 +307,39 @@ api :-- https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62
 # useState() - super powerful state variable
 
 # when ever state variable changes React rerender the components
+
+# React v16 :--> Reconcillation Algorithm(Also known as React fiber)
+
+# 7 Res-card React craetes virtul dom(NESTED OBJECT) representation of actual dom
+
+Diff algorithm :-- find the diff between Updated virtual dom and Previous virtul dom Then actually updated the dom on every render
+
+On click dif between VDOM and ADOM
+
+Virtual dom concept is very old React get it and make its algo on it
+
+# Why React is Fast?
+
+React have a concept of virtual dom it has reconcilaion algorithm inrduce in react 16 now also known as rEact fiber(incremental rendering ability of spliting work into small chunks ) can do very efficienty DOM menupulation find out diff and updated dom
+
+# useState() have two elements WHY?
+
+React needs a trigger to start diff algo and update the DOM
+
+React makes UI Layer and Data Layer synch updated Dom
+
+# So now it is taht easy
+
+# Why useState()?
+
+# What is reconciliation and diffing algorithm in React?
+
+# wht is react fiber?
+
+# reconciliation
+
+When an application's state changes, React needs to update the user interface to reflect the new state. To do this, it compares the current component tree (virtual DOM) with the new one, calculates the difference (diff), and then makes the necessary updates to the actual DOM. This process is called reconciliation.
+
+# Whenever state variables updates react trigger the reconcillation(re-render the component)
+
+#
