@@ -18,7 +18,7 @@
   border-radius: 10px;
 }
 
-.logo_container > img {
+.logo_container > a > img {
   width: 100px;
 }
 
@@ -27,11 +27,15 @@
 }
 
 .nav_items > ul > li {
-  text-decoration: none;
   list-style-type: none;
   margin: 5px 10px;
   padding: 5px 10px;
   font-size: 20px;
+}
+
+.nav_items > ul > li > a {
+  color: black;
+  text-decoration: none;
 }
 
 .res_card {
@@ -88,4 +92,9 @@
 
 .btnWidth > button {
   width: 50px;
+}
+
+.link_style {
+  text-decoration: none;
+  color: black;
 }

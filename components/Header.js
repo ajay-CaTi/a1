@@ -1,22 +1,39 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import IMG_LOGO from "./images/food.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [login, setLogin] = useState("Login");
+  console.log("login");
+  useEffect(() => {
+    console.log("useEffect calls");
+  });
+
   const handleClick = () => {
     login == "Login" ? setLogin("Logout") : setLogin("Login");
   };
+
   return (
     <div className="header">
       <div className="logo_container">
-        <img src={IMG_LOGO} alt="food_logo" />
+        <Link to={"/"}>
+          <img src={IMG_LOGO} alt="food_logo" />
+        </Link>
       </div>
       <div className="nav_items">
         <ul className="">
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
+          <li>
+            <Link to={"/"}>Home</Link>
+          </li>
+          <li>
+            <Link to={"/about"}>About</Link>
+          </li>
+          <li>
+            <Link to={"/contact"}>Contact Us</Link>
+          </li>
+          <li>
+            <Link to={"/"}>Cart</Link>
+          </li>
           <li className="btnWidth">
             <button onClick={handleClick}>{login}</button>
           </li>

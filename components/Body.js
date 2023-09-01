@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
 import { FOOD_API } from "./utils/constants";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [listOfResturants, setListOfResturants] = useState([]);
@@ -30,7 +31,9 @@ const Body = () => {
     });
     console.log(list);
     setListOfResturants(list);
+    setFilterResturant(list);
   };
+  console.log(listOfResturants);
 
   if (listOfResturants.length == 0) {
     return <Shimmer />;
@@ -50,7 +53,7 @@ const Body = () => {
           onClick={() => {
             console.log(searchText);
             const filterResturant = listOfResturants.filter((res) =>
-              res.info.name.toLowerCase().includes(searchText)
+              res.info.name.toLowerCase().includes(searchText.toLowerCase())
             );
             setFilterResturant(filterResturant);
           }}

@@ -286,6 +286,8 @@ logi url :-- https://i.pinimg.com/originals/b3/e5/f3/b3e5f321d4aedcf983a6c95f5a6
 
 api :-- https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING
 
+perticular restaurant :-- https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=65797&catalog_qa=undefined&submitAction=ENTER
+
 # Header
 
 - Logo
@@ -342,4 +344,24 @@ When an application's state changes, React needs to update the user interface to
 
 # Whenever state variables updates react trigger the reconcillation(re-render the component)
 
-#
+# no dependency Array :--> useEffect called on every render.
+
+# Every time my component render useEffect will be called ONCE! when empty array is given[]
+
+# Every time my component render useEffect will be called when-ever the state value is changed given in array[]
+
+# Hooks uses to create local state variable inside functional components.
+
+# Rules of Hook?
+
+# Why error comes in Hooks
+
+eslint-plugin-react-hooks installed with create-react-appby default.
+
+# microfrontend?
+
+# configuration means Info that will tell the browser-router that what will happen in specific path
+
+# client side routing :- All components is already loaded in our app only component loads for diff path
+
+# 01:49:42
