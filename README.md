@@ -364,4 +364,8 @@ eslint-plugin-react-hooks installed with create-react-appby default.
 
 # client side routing :- All components is already loaded in our app only component loads for diff path
 
-# 01:49:42
+# Loading the class base components means craeting an instance of that class. constructor is called, best place to recieve props, best place to craete state variables. STtse here is big whole object which contain state variables. after contructor then render is called, then componentDidMount is called
+
+# I wnat to render my data as react do ten make api request and then fill data inside it.
+
+# React batch the render(commit base) phase bacause dom upadte is very expensive
