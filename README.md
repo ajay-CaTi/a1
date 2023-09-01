@@ -369,3 +369,9 @@ eslint-plugin-react-hooks installed with create-react-appby default.
 # I wnat to render my data as react do ten make api request and then fill data inside it.
 
 # React batch the render(commit base) phase bacause dom upadte is very expensive
+
+# Why write super props?
+
+# Why async componentDidMount?
+
+# Why not use async in useEffect?
