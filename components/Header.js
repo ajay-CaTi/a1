@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import IMG_LOGO from "./images/food.png";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "./useOnlineStatus";
 
 const Header = () => {
   const [login, setLogin] = useState("Login");
+  const onlineStatus = useOnlineStatus();
   console.log("login");
   useEffect(() => {
     console.log("useEffect calls");
@@ -33,6 +35,11 @@ const Header = () => {
           </li>
           <li>
             <Link to={"/"}>Cart</Link>
+          </li>
+          <li>
+            <Link to={"/"}>
+              {onlineStatus === true ? "Online 🟢" : "Offline 🔴"}
+            </Link>
           </li>
           <li className="btnWidth">
             <button onClick={handleClick}>{login}</button>

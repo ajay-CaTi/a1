@@ -3,11 +3,13 @@ import RestaurantCard from "./RestaurantCard";
 import { FOOD_API } from "./utils/constants";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "./useOnlineStatus";
 
 const Body = () => {
   const [listOfResturants, setListOfResturants] = useState([]);
   const [filterResturant, setFilterResturant] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const onlineStatus = useOnlineStatus();
 
   useEffect(() => {
     fetchData();
@@ -34,6 +36,10 @@ const Body = () => {
     setFilterResturant(list);
   };
   console.log(listOfResturants);
+
+  if (onlineStatus === false) {
+    return <h1>Looks you are offline</h1>;
+  }
 
   if (listOfResturants.length == 0) {
     return <Shimmer />;
