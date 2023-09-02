@@ -24,7 +24,7 @@ const RestaurantMenu = () => {
   }
 
   const { itemCards } =
-    resInfo.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[1].card.card;
+    resInfo.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[2].card.card;
   console.log(itemCards);
 
   const { name, avgRating, cuisines, cloudinaryImageId, costForTwoMessage } =
@@ -50,7 +50,9 @@ const RestaurantMenu = () => {
             return (
               <li key={res.card.info.id}>
                 {res.card.info.name} - Price:-{" "}
-                {Math.round(res.card.info.price / 100)}
+                {Math.round(res.card.info.price / 100)
+                  ? Math.round(res.card.info.price / 100)
+                  : Math.round(res.card.info.defaultPrice / 100)}
               </li>
             );
           })}

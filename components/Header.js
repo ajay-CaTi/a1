@@ -19,11 +19,11 @@ const Header = () => {
     <div className="header">
       <div className="logo_container">
         <Link to={"/"}>
-          <img src={IMG_LOGO} alt="food_logo" />
+          <img className="" src={IMG_LOGO} alt="food_logo" />
         </Link>
       </div>
       <div className="nav_items">
-        <ul className="">
+        <ul className="font-bold">
           <li>
             <Link to={"/"}>Home</Link>
           </li>

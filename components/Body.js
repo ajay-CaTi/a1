@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import { FOOD_API } from "./utils/constants";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -10,6 +10,9 @@ const Body = () => {
   const [filterResturant, setFilterResturant] = useState([]);
   const [searchText, setSearchText] = useState("");
   const onlineStatus = useOnlineStatus();
+
+  //HOC
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
   useEffect(() => {
     fetchData();
@@ -71,17 +74,35 @@ const Body = () => {
       <div className="res_container">
         {filterResturant.map((val) => {
           return (
-            <RestaurantCard
+            <Link
+              className="link_style"
+              to={`/res/${val.info.id}`}
               key={val.info.id}
-              name={val.info.name}
-              id={val.info.id}
-              avgRating={val.info.avgRating}
-              cost={val.info.costForTwo}
-              cuisines={val.info.cuisines}
-              cloudinaryImageId={val.info.cloudinaryImageId}
-              deliveryTime={val.info.sla.deliveryTime}
-              restaurantId={val.info.feeDetails.restaurantId}
-            />
+            >
+              {val.info.isOpen ? (
+                <RestaurantCardPromoted
+                  name={val.info.name}
+                  id={val.info.id}
+                  avgRating={val.info.avgRating}
+                  cost={val.info.costForTwo}
+                  cuisines={val.info.cuisines}
+                  cloudinaryImageId={val.info.cloudinaryImageId}
+                  deliveryTime={val.info.sla.deliveryTime}
+                  restaurantId={val.info.feeDetails.restaurantId}
+                />
+              ) : (
+                <RestaurantCard
+                  name={val.info.name}
+                  id={val.info.id}
+                  avgRating={val.info.avgRating}
+                  cost={val.info.costForTwo}
+                  cuisines={val.info.cuisines}
+                  cloudinaryImageId={val.info.cloudinaryImageId}
+                  deliveryTime={val.info.sla.deliveryTime}
+                  restaurantId={val.info.feeDetails.restaurantId}
+                />
+              )}
+            </Link>
           );
         })}
       </div>

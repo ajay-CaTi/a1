@@ -383,3 +383,11 @@ code splitting
 Dynamic Bundeling
 Lazy Loading
 dynamic import
+
+# Hiher oredr component
+
+is a component and returns a component by enhance its features
+
+# Application have 2 layer, Ui layer is powered by Data layer,
+
+# Handle the data layer to make App performansive

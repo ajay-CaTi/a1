@@ -98,3 +98,12 @@
   text-decoration: none;
   color: black;
 }
+
+.label_style {
+  position: absolute;
+  margin-left: 12px;
+  background-color: black;
+  color: white;
+  border-radius: 7px;
+  padding: 5px;
+}
