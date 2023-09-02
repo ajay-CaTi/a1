@@ -1,15 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import { FOOD_API } from "./utils/constants";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "./useOnlineStatus";
+import UserContext from "./utils/UserContext";
 
 const Body = () => {
   const [listOfResturants, setListOfResturants] = useState([]);
   const [filterResturant, setFilterResturant] = useState([]);
   const [searchText, setSearchText] = useState("");
   const onlineStatus = useOnlineStatus();
+  const { loggedInUser, setuserName } = useContext(UserContext);
+  console.log(loggedInUser);
 
   //HOC
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
@@ -70,6 +73,16 @@ const Body = () => {
           Search
         </button>
         <button onClick={filterTopRes}>Top rated Restaurants</button>
+
+        <input
+          value={loggedInUser}
+          onChange={(e) => {
+            setuserName(e.target.value);
+          }}
+          type="text"
+          className="search_input"
+          placeholder="UserName"
+        />
       </div>
       <div className="res_container">
         {filterResturant.map((val) => {

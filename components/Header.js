@@ -1,14 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import IMG_LOGO from "./images/food.png";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "./useOnlineStatus";
+import UserContext from "./utils/UserContext";
 
 const Header = () => {
   const [login, setLogin] = useState("Login");
+  // const data = useContext(UserContext);
+  const { loggedInUser } = useContext(UserContext);
   const onlineStatus = useOnlineStatus();
-  console.log("login");
+  // console.log("login");
   useEffect(() => {
-    console.log("useEffect calls");
+    // console.log("useEffect calls");
   });
 
   const handleClick = () => {
@@ -47,6 +50,7 @@ const Header = () => {
           <li className="btnWidth">
             <button onClick={handleClick}>{login}</button>
           </li>
+          <li>{loggedInUser}</li>
         </ul>
       </div>
     </div>

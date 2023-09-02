@@ -391,3 +391,9 @@ is a component and returns a component by enhance its features
 # Application have 2 layer, Ui layer is powered by Data layer,
 
 # Handle the data layer to make App performansive
+
+# Lifting the state up( give child control to its parent )
+
+# Controlled and uncontrolled comp
+
+# Pure component

@@ -155,3 +155,10 @@
 .itemlist_testAlign {
   text-align: left;
 }
+
+.but_to_add {
+  position: absolute;
+  margin-left: 15px;
+  color: white;
+  background-color: black;
+}

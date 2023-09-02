@@ -18,6 +18,7 @@ const ItemList = ({ items }) => {
             </div>
           </div>
           <div className="itemlist_img">
+            <button className="but_to_add">+Add</button>
             <img src={RES_IMAGE + item.card.info.imageId} alt="" />
           </div>
         </div>

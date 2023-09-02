@@ -3,22 +3,13 @@ import { RES_IMAGE } from "./utils/constants";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "./useRestaurantMenu";
 import RestaurantCategory from "./RestaurantCategory";
+import { useState } from "react";
 
 const RestaurantMenu = () => {
-  // const [resInfo, setResInfo] = useState([]);
+  const [showIndex, setShowIndex] = useState(0);
+  // const [showIndex, setShowIndex] = useState(0); // useState(null) // to close all initially
   const { resId } = useParams();
   const resInfo = useRestaurantMenu(resId);
-
-  // useEffect(() => {
-  //   fetchMenu();
-  // }, []);
-
-  // const fetchMenu = async () => {
-  //   const data = await fetch(MENU_CARD + resId);
-  //   const json = await data.json();
-  //   console.log(json);
-  //   setResInfo(json);
-  // };
 
   if (resInfo.length === 0) {
     return <Shimmer />;
@@ -72,10 +63,12 @@ const RestaurantMenu = () => {
             );
           })}
         </ul> */}
-        {categories.map((category) => (
+        {categories.map((category, index) => (
           <RestaurantCategory
-            // key={category?.card?.card.title}
+            key={index}
             data={category?.card?.card}
+            showItems={index === showIndex && true}
+            setShowIndex={() => setShowIndex(index)}
           />
         ))}
       </div>
