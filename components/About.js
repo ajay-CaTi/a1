@@ -20,6 +20,10 @@ class About extends Component {
         </UserContext.Consumer>
         <h1>About</h1>
         <User id={"ajay"} />
+
+        <UserContext.Consumer>
+          {({ loggedInUser }) => <h1>{loggedInUser}</h1>}
+        </UserContext.Consumer>
       </div>
     );
   }

@@ -51,18 +51,6 @@ const RestaurantMenu = () => {
         />
       </div>
       <div>
-        {/* <ul>
-          {itemCards.map((res) => {
-            return (
-              <li key={res.card.info.id}>
-                {res.card.info.name} - Price:-{" "}
-                {Math.round(res.card.info.price / 100)
-                  ? Math.round(res.card.info.price / 100)
-                  : Math.round(res.card.info.defaultPrice / 100)}
-              </li>
-            );
-          })}
-        </ul> */}
         {categories.map((category, index) => (
           <RestaurantCategory
             key={index}
