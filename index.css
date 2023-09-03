@@ -158,7 +158,30 @@
 
 .but_to_add {
   position: absolute;
+  border-radius: 5px;
+  padding: 2px 5px;
   margin-left: 15px;
   color: white;
   background-color: black;
+  cursor: pointer;
+}
+
+.cart_hesding {
+  text-align: center;
+  margin: 10px 0px;
+}
+
+.cart_butt_sty {
+  display: flex;
+  justify-content: center;
+}
+
+.cart_butt {
+  font-size: 20px;
+  align-items: center;
+  border-radius: 5px;
+  padding: 2px 5px;
+  color: white;
+  background-color: black;
+  cursor: pointer;
 }

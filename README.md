@@ -397,3 +397,64 @@ is a component and returns a component by enhance its features
 # Controlled and uncontrolled comp
 
 # Pure component
+
+# REdux used where data is heavily used
+
+# Seperate libary Redux
+
+# React-Redux act like bridge between raect and redux
+
+# The Redux Toolkit package is intended to be the standard way to write Redux logic. It was originally created to help address three common concerns about Redux:
+
+-"Configuring a Redux store is too complicated"
+-"I have to add a lot of packages to get Redux to do anything useful"
+-"Redux requires too much boilerplate code"
+
+# Redux store is a ery big JS onject stored in Global central place
+
+# Multiple slices(Logcal Partition) in Store
+
+Lodgin info :- User slice
+cart info :- cart slice
+display theme info :- theme slice
+
+# On Button click how data go in cart slice
+
+Directly cannot modify cart slice No!...
+
+# O----------------------------
+
+# On BUtton click it DISPATCHES an ACTION
+
+# it calls a function(Known as REDUCER)
+
+# and this function Updated/Modify Slice cart(STORE) internially
+
+# Above is for WRITE DATA
+
+# To get data from cart use SELECTOR to give daa to cart
+
+# USing SELECTOR phenonmena known as Subscribibg to store
+
+# install
+
+@reduxjs/toolkit
+react-redux
+
+# build store
+
+# connect store to app
+
+# SLice(cartSlice)
+
+# dispatch(action)
+
+# Selector
+
+# addItem:(state, action)=>{
+
+    }
+
+# (state, action)=>{} Reducer function have 2 parameters state, action & modify state based uopn action
+
+# 01:06:08

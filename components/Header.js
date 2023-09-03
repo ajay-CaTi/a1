@@ -3,6 +3,7 @@ import IMG_LOGO from "./images/food.png";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "./useOnlineStatus";
 import UserContext from "./utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [login, setLogin] = useState("Login");
@@ -13,6 +14,12 @@ const Header = () => {
   useEffect(() => {
     // console.log("useEffect calls");
   });
+
+  //SELECTOR : subscribig to store using selector
+  // useSelector hook have access to store
+  // tell portion of store want access
+  const cartItems = useSelector((store) => store.cart.items);
+  console.log(cartItems, "cart");
 
   const handleClick = () => {
     login == "Login" ? setLogin("Logout") : setLogin("Login");
@@ -40,7 +47,9 @@ const Header = () => {
             <Link to={"/grocery"}>Grocery</Link>
           </li>
           <li>
-            <Link to={"/"}>Cart</Link>
+            <Link to={"/cart"}>
+              Cart ({cartItems.length === 0 ? 0 : cartItems.length})items
+            </Link>
           </li>
           <li>
             <Link to={"/"}>
